@@ -1,0 +1,18 @@
+def sumTriangle(arr):
+    if len(arr) == 1:
+        return
+    temp = []
+    helper(temp,arr,0)
+    sumTriangle(temp)
+    print(temp)
+
+
+def helper(temp,x,index):
+    if index == len(x) - 1:
+        return temp
+    #temp[index] = x[index] + x[index + 1]
+    temp.append(x[index] + x[index + 1])
+    return helper(temp,x,index + 1)
+arr = [1,2,3,4,5]
+sumTriangle(arr)
+print(arr)
