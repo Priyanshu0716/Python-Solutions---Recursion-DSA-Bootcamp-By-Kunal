@@ -19,9 +19,9 @@ def helper(temp,array,index):
     if index == len(array) - 1: # base condition for helper function.
         return temp
   
-    temp.append(x[index] + x[index + 1]) # This will add the sum of consecutive numbers of the array in the temp array.
+    temp.append(array[index] + array[index + 1]) # This will append the sum of consecutive numbers of the array in the temp array.
     
-    return helper(temp,x,index + 1)
+    return helper(temp,array,index + 1)
     
 arr = [1,2,3,4,5]
 sumTriangle(arr) # this function will not print the actual array as the last line of triangle in function calls. so we need to print the array separately.
