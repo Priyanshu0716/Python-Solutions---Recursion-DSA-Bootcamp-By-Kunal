@@ -1,18 +1,29 @@
+Please Use Pen and Paper or Debugger to have a better understanding of the solution given below.
+
+
+
 def sumTriangle(arr):
-    if len(arr) == 1:
+    if len(arr) == 1:  # base condition for recursive calls of sumTriangle functions.
         return
-    temp = []
-    helper(temp,arr,0)
-    sumTriangle(temp)
-    print(temp)
+        
+    temp = []    # Here we want a new empty array everytime until we reach to base condition, that's why an empty temp array is taken.
+    
+    helper(temp,arr,0)  # This funcion will do the sum part of the array passed as an argument in this function (here array) and will do recursive calls and return temp.
+    
+    sumTriangle(temp) # After we got the temp array from above recursive calls this function will call the new temp array formed and so on.
+    
+    print(temp) # after all recursion calls we will be printing the temp array formed from the sum of given array one by one.
 
 
-def helper(temp,x,index):
-    if index == len(x) - 1:
+def helper(temp,array,index):
+    if index == len(array) - 1: # base condition for helper function.
         return temp
-    #temp[index] = x[index] + x[index + 1]
-    temp.append(x[index] + x[index + 1])
+  
+    temp.append(x[index] + x[index + 1]) # This will add the sum of consecutive numbers of the array in the temp array.
+    
     return helper(temp,x,index + 1)
+    
 arr = [1,2,3,4,5]
-sumTriangle(arr)
+sumTriangle(arr) # this function will not print the actual array as the last line of triangle in function calls. so we need to print the array separately.
 print(arr)
+
