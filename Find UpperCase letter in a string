@@ -1,0 +1,12 @@
+# In this program we will find the first uppercase letter of a string using recursion. Given that there will be atleast one uppercase letter in the string.
+
+def first(s, idx):
+
+    if s[idx].isupper():
+      return s[idx]
+    
+   return first(s, idx + 1) 
+   
+if __name__ == __main__:
+    s = "priyAnshu"
+    print(first(s,0))
