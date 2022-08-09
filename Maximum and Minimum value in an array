@@ -1,0 +1,34 @@
+
+
+# Program to find the Minimum Element in an array:
+
+----> In this program we will assume the minimum to be arr[0] (first element) at start and put this as an argument to the recursive function. Then we will compare
+other elements of the array and return the minimum element at the base condition.
+
+
+def minimumElement(arr,index,minimum):
+    if index == len(arr):  # Base condition of the recursive function.
+        return minimum
+    if arr[index] < minimum:
+        minimum = arr[index]
+    return minimumElement(arr,index + 1,minimum)
+
+
+# Program to find the Maximum Element in an array:
+
+----> In this program we will assume the maximum to be arr[0] (first element) at start and put this as an argument to the recursive function. Then we will compare
+other elements of the array and return the maximum element at the base condition.
+
+def maximumElement(arr,index,maximum):
+    if index == len(arr):
+        return maximum
+    if arr[index] > maximum:
+        maximum = arr[index]
+    return maximumElement(arr,index + 1,maximum)
+    
+if __name__ == __main__:
+    
+    arr = [1, 4, 45, 6, -50, 10, 2]
+    ans = minimumElement(arr,0,arr[0])
+    ans2 = maximumElement(arr,0,arr[0])
+    print(ans, ans2)
