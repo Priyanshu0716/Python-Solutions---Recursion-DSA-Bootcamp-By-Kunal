@@ -1,0 +1,22 @@
+# In this program we will be searching the target in a sorted array using binary search Recursively.
+
+def binarySearch(arr,target,start,end):
+    if start > end:   # Base condition
+      return -1
+    
+    mid = (start + end) // 2
+    
+    if arr[mid] > target:
+      return binarySearch(arr, target, start, mid - 1)
+    
+    elif arr[mid] < target:
+      return binarySearch(arr, target, mid + 1, end)
+    
+    else:
+      return mid
+      
+if __name__ == __main__:
+  arr = [-1,0,3,5,9,12]
+  target = 9
+  print(binarySearch(arr,target,0,len(arr) - 1)
+    
