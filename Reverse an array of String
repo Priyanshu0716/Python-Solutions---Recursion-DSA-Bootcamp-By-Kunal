@@ -1,0 +1,29 @@
+# Here we need to reverse the string characters given in an array.
+
+#1. Naive Approach ---->  Using two - pointers approach.
+
+def reverseString(arr):
+   while i < j:
+      arr[i], arr[j] = arr[j], arr[i]
+      i += 1
+      j -= 1
+   return arr
+
+input = ["H", "e", "l", "l", "o"]
+output = ["o", "l", "l", "e", "H"]
+
+
+#2  Recursive Approach.
+def reverseString(arr,i,j):
+    if i >= j:   # Base condition for recursive calls to stop further calling.
+        return arr
+    
+    arr[i], arr[j] = arr[j], arr[i]
+    
+    return reverseString(arr, i + 1, j - 1)
+    
+reverseString(arr, 0, len(arr) - 1)
+    
+-> input = ["H", "e", "l", "l", "o"]
+-> output = ["o", "l", "l", "e", "H"]
+      
