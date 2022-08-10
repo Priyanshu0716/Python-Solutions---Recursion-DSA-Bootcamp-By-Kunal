@@ -1,0 +1,13 @@
+# In this program we will find the length of string using recursion. For this we will use the slicing technique of strings.
+
+def lengthOfString(s):
+  
+  if s == "" :  # base condition
+    return 0
+  
+  return 1 + lengthOfString(s[1:]) # here s[1:] will return the string sliced from 1st position till the end. Eg. s = "priyanshu" and s[1:] will give "riyanshu" and so on.
+  
+ 
+input --> s = 'priyanshu'
+output --> 9
+
