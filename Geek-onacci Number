@@ -1,0 +1,23 @@
+# In this program we are given with 4 numbers A, B, C, N. Where A, B, C represents the first three numbers of the series and N represents the number to find in that 
+series. In this series the number to be find is the sum of the last three numbers.
+
+
+def geekOnacci(a,b,c,n):
+  
+  if n == 1:
+    return a
+  
+  if n == 2:
+    return b
+  
+  if n == 3:
+    return c
+   
+  return geekOnacci(a, b, c, n - 1) + geekOnacci(a, b, c, n - 2) + geekOnacci(a, b, c, n - 3)
+  
+if __name__ == __main__:
+
+a,b,c,n = map(int, input().split())  # suppose a, b, c, n = 1, 3, 2, 4
+print(geekOnacci(a, b, c, n)
+
+# Output ------>  6
