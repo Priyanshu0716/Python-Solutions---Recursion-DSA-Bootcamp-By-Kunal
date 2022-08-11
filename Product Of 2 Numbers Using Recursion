@@ -1,0 +1,16 @@
+# In this program we will print the product of two numbers using Recursion.
+
+def product(a, b) :
+    
+    if b > a :
+       return product(b, a)  # If this condition becomes true than we will swap the values of a and b
+    
+    elif b != 0 :
+       return a + product(a, b - 1)
+    
+    else:
+      return 0
+
+print(product(100, 3))
+
+Output >> 300
