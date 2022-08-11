@@ -1,0 +1,14 @@
+# In this program we have to print the sum of digits of a number using Recursion. The approach is simple that we will extract the remainder till the number becomes 0
+and add the remainder to the last digits.
+
+def sumOfDigits(n) :
+    if n == 0 :
+        return 0
+    
+    last_digit = n % 10
+    
+    return last_digit + sumOfDigits(n // 10)
+    
+sumOfDigits(65432)
+
+# Output ---> 20
