@@ -1,0 +1,26 @@
+# In this program we will sort the given array using Bubble sort algo by recursion. We will be using the same concept of bubble sort iterative approach, i.e. ,outer loop
+will be used to traverse the array and inner loop will be used to sort the last elements and so on.
+
+
+def bubbleSort(arr, idx): # This function will be tracking each element in every recursion.
+    
+    if i == len(arr) - 1 : # base condition
+        return arr
+       
+    helper(arr, idx, 1)
+    
+    return bubbleSort(arr, idx + 1)
+    
+def helper(arr, index, j):  # This function will be sorting the last elements for each recursion.
+    
+    if j == len(arr) - i : # Base condition
+        return arr
+    
+    if arr[j] < arr[j - 1] :
+        arr[j], arr[j - 1] = arr[j - 1], arr[j]
+    
+    return helper(arr, index, j + 1)
+    
+ # input --->  [5,3,4,2,1]
+ # output ---> [1,2,3,4,5]
+    
