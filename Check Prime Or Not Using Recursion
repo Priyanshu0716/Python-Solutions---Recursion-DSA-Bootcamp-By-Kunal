@@ -1,0 +1,22 @@
+# In this program we will find out if the given number is prime or not using Recursion. The appraoch is simple, as the divisor number's square becomes greater than the
+dividend (given number) then we will stop the recursion and return True.
+
+def isPrime(N) :
+  
+  if N <= 1 :
+    return False
+  
+  return helper(N, 2)
+  
+def helper(N, s) :
+  
+  if s*s > N :
+    return True
+   
+  elif N % s == 0 :
+    return False
+  
+  return helper(N, s + 1)
+  
+>> print(isPrime(13))
+>> True
