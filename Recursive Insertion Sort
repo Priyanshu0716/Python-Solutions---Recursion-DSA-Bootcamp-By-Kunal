@@ -1,0 +1,27 @@
+# In this program we will sort an array using insertion sort algo by recursion. The concept of Insertion sort will be the same that we will be sorting a part of array 
+and then move to next, as in iterative approach.
+
+def Insertion(arr, i) :
+    
+    if i == len(arr) - 1 :
+        return arr
+    
+    helper(arr, i, i + 1)
+    
+    return Insertion(arr, i + 1)
+    
+def helper(arr, index, j) :
+    
+    if j == 0 :
+      return arr
+      
+    if arr[j] < arr[j - 1] :
+       arr[j], arr[j - 1] = arr[j - 1], arr[j]
+    
+    return helper(arr, index, j - 1)
+    
+ 
+ Insertion(arr, 0)
+    
+    # input ---> [5,3,4,2,1,-9,0,-1,6,-4]
+    # output ---> [-9, -4, -1, 0, 1, 2, 3, 4, 5, 6]
