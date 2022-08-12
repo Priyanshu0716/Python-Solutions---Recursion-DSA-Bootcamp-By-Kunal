@@ -1,0 +1,18 @@
+# LeetCode problem - 1342
+
+def numberOfSteps(numb):
+  
+  return helper(numb, 0)
+  
+def helper(n, steps):
+  if n == 0:
+    return steps
+    
+  elif n % 2 == 0:
+    return helper(n // 2, steps + 1)
+    
+  else:
+    return helper(n -1, steps + 1)
+    
+>> print(numberOfSteps(14))
+>> 6
