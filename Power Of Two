@@ -1,0 +1,33 @@
+# In this program we need to check wheter a given number is power of 2 or not using Recursion.
+
+---->> Naive Approach - using bitwise AND (&) without recursion.
+
+def power(numb) :
+  
+  if n == 0 :
+    return False
+    
+  elif n & n - 1 == 0 :  # suppose n = 16 in binary = 10000  and n - 1 in binary 15 = 1111 , Now 10000 & 1111 == 0. so 16 is power of two.
+    return True
+   
+  else:
+    return False
+    
+    
+----->> Recursive Approach - we will be increasing the digit which is in power, if the number becomes greater than given number we will return False.
+
+def powerOfTwo(n) :
+  return helper(n, 0)
+  
+def helper(numb, digit):
+  if 2 ** digit > numb:
+    return False
+  
+  elif 2 ** digit == numb:
+    return True
+    
+  else:
+    return helper(numb, digit + 1)
+    
+>> print(powerOfTwo(16))
+>> True
