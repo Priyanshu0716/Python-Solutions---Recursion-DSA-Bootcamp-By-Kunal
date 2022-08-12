@@ -1,0 +1,19 @@
+# In this program we have remove all the cosecutive duplicate characters from a string.
+
+eg. s = "aaaaabbbbb" >> "ab"
+
+def removeDuplicate(string):
+  return helper(string, 1, string[0])
+  
+def helper(s, start, newString):
+  if start == len(s):  # base condition if we have traversed the whole array.
+    return newString
+    
+  elif s[start] == s[start - 1]:  ## It will find the consecutive duplicate and ignore them if any.
+    return helper(s, start + 1, newString)
+   
+  else:
+    return helper(s, start + 1, newString + s[start]) # if there are no consecutive duplicates for a function call then we will add that character in new string.
+    
+ >> print(removeDuplicate("aaabbb")
+ >> ab
