@@ -1,0 +1,11 @@
+# In this program we have find the sum of first N natural numbers using recursion
+
+def natural(n) :
+  
+  if n == 1 :  # base condition
+    return 1
+  
+  return n + natural(n - 1)
+  
+>> print(natural(10))
+>> 55
