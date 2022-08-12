@@ -1,0 +1,17 @@
+# In this program we will check whether the given number is power of 4 or not.
+
+def powerOfFour(numb):
+  return helper(numb, 0)
+  
+def helper(n, digit):
+  if 4 ** digit > n:
+    return False
+  
+  elif 4 ** digit == n:
+    return True
+    
+  else:
+    return helper(n, digit + 1)
+    
+>> print(powerOfFour(64))
+>> True
