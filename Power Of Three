@@ -1,0 +1,17 @@
+# In this program we will check whether a given number is power of three or not.
+
+def powerOfThree(numb):
+  return helper(numb, 0)
+ 
+ helper(number, digit):
+  if 3 ** digit > number:
+    return False
+    
+  elif 3 ** digit == number:
+    return True
+  
+  else:
+    return helper(number, digit + 1)
+    
+>> print(powerOfThree(12))
+>> False
