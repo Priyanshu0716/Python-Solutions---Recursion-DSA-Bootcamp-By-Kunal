@@ -1,0 +1,11 @@
+# In this program we have to check whehter the given array is sorted not not using recursion.
+
+def isSorted(array, start):
+  if start == len(arr) - 1:
+    return True
+    
+  return arr[start] < arr[start + 1] and isSorted(array, start + 1) # The logical operator will give true only if both statements are true.
+  
+>> arr, start = [1,2,3,8,9], 0
+>> print(isSorted(arr, start))
+>> True
